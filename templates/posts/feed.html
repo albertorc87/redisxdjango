@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+    <article class="text-center bg-white shadow-md mb-4 p-2" style="width:300px">
+        <a class="block mb-4" href="{% url 'posts:detail' post.url%}">
+            <h2 class="text-2xl font-bold">{{post.title}}</h2>
+            <div class="text-md">{{post.post|truncatechars:200}} <strong>Leer más</strong></div>
+            <time class="text-gray-500" datetime="{{post.created|date:"Y-m-d"}}">{{post.created|date:"M d, Y"}}</time> por <strong>{{post.user.username}}</strong>
+        </a>
+    </article>
+    {% endfor %}
+{% endblock %}

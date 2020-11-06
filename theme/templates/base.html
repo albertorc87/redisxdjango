@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Redis x Django</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	</head>
+
+	<body class="bg-grey-lightest">
+
+		<header class="bg-gray-900 shadow-md">
+			<nav class="flex justify-between items-center text-gray-200 px-4 shadow-md sm:py-4 sm:justify-around">
+				<div class="sm:hidden text-2xl">&equiv;</div>
+			</nav>
+			<div class="bg-white text-center">
+				<div class="text-6xl font-bold">
+					Redis x Django
+				</div>
+				<h1 class="text-gray-700 text-xl pb-4">Tutorial de Redis en Django</h1>
+			</div>
+		</header>
+		<div class="mt-10 md:flex justify-center">
+        	<div class="flex justify-between mb-8 md:mr-2 flex-wrap" style="max-width:930px">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+
+	</body>
+
+</html>
