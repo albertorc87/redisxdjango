@@ -1,6 +1,6 @@
 # Django x Redis
 
-En este tutorial vamos a ver como implementar un sistema de caché con Redis en un proyecto de Django. Para utilizar configurar este proyecto en tu equipo, debes seguir los siguientes pasos:
+En este tutorial vamos a ver como implementar un sistema de caché con Redis en un proyecto de Django. En la rama initial está todo configurado para empezar a seguir el tutorial desde 0. Para utilizar configurar este proyecto en tu equipo, debes seguir los siguientes pasos:
 
 ## Instalar dependencias
 
