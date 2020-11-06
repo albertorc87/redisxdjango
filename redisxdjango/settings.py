@@ -40,9 +40,11 @@ INSTALLED_APPS = [
     'posts',
     'theme',
     'tailwind',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -132,3 +134,7 @@ STATIC_URL = '/static/'
 TAILWIND_APP_NAME = 'theme'
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
