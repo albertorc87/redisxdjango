@@ -35,7 +35,7 @@ Ahora solo necesitamos arrancar los contenedores para realizar las pruebas:
 
 ```bash
 docker run --rm -p 5433:5432 --name testpostgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin123 -e POSTGRES_DB=test postgres
-docker run --rm -p 6379:6379 --name testredis -h 127.0.0.1 redis
+docker run --rm -p 6379:6379 --name testredis redis
 ```
 
 ## Migrar tablas y generar datos
