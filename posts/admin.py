@@ -1,9 +1,7 @@
 from django.contrib import admin
-from django.test import Client
-from django.core.cache import cache
 
 from posts.models import Post
-from posts import views
+from posts import tasks
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
@@ -17,9 +15,5 @@ class PostAdmin(admin.ModelAdmin):
 
         # Si es un post nuevo, debemos cargar la caché de la página principal
         if not change:
-            res = cache.keys('*main*')
-            if res:
-                delete_cache = cache.delete_many(res)
-            c = Client()
-            response = c.get('/', SERVER_NAME='127.0.0.1:8000')
+            tasks.reboot_cache_main()
 
